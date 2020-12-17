@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:simple_app/product.dart';
+
 import 'package:simple_app/products.dart';
 
 class ProductManager extends StatefulWidget {
@@ -32,9 +34,9 @@ class _ProductManagerState extends State<ProductManager> {
             },
             child: Text('Add Product'),
           ),
-        )
+        ),
+        Products(_products)
       ],
-      Products(_products);
     );
   }
 }
