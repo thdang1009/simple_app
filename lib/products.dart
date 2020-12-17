@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:simple_app/model/product.dart';
+import 'product.dart';
 
 class Products extends StatelessWidget {
-  List<Product> products = [
-    Product('Lẩu', 'lau.jpg'),
-    Product('Hải Sản', 'hai_san.jpg'),
-    Product('Thịt Nướng', 'thit_nuong.jpg')
-  ];
+  final List<Product> products;
 
   Products(this.products);
 
@@ -15,11 +11,11 @@ class Products extends StatelessWidget {
     // TODO: implement build
     return Column(
       children: products
-          .map((el) => Card(
+          .map((element) => Card(
                 child: Column(
                   children: <Widget>[
-                    Image.asset('assets/' + el.path),
-                    Text(el.name)
+                    Image.asset('assets/' + element.path),
+                    Text(element.name)
                   ],
                 ),
               ))
