@@ -35,15 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Column(
-        children: [
-          Container(
-            margin: EdgeInsets.all(10.0),
-            child: RaisedButton(
-              onPressed: () {},
-              child: Text('Add Product'),
-            ),
-          ),
-        ],
+        children: [],
       ),
     );
   }

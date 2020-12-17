@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../model/product.dart';
+import 'package:simple_app/model/product.dart';
 
 class Products extends StatelessWidget {
   List<Product> products = [
