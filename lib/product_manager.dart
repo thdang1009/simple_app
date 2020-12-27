@@ -5,21 +5,20 @@ import 'package:simple_app/product.dart';
 import 'package:simple_app/products.dart';
 
 class ProductManager extends StatefulWidget {
+  final List<Product> startingProduct;
+  ProductManager(this.startingProduct);
   @override
   State<StatefulWidget> createState() => _ProductManagerState();
 }
 
-/*
-    Product('Lẩu', 'lau.jpg'),
-    Product('Hải Sản', 'hai_san.jpg'),
-    Product('Thịt Nướng', 'thit_nuong.jpg')
-*/
 class _ProductManagerState extends State<ProductManager> {
-  List<Product> _products = [
-    Product('Lẩu', 'lau.jpg'),
-    Product('Hải Sản', 'hai_san.jpg'),
-    Product('Thịt Nướng', 'thit_nuong.jpg')
-  ];
+  List<Product> _products = [];
+  @override
+  void initState() {
+    _products = _products + widget.startingProduct;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(

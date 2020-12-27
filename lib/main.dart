@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_app/product.dart';
 import 'package:simple_app/product_manager.dart';
 
 void main() {
@@ -29,6 +30,10 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text(title),
         ),
-        body: ProductManager());
+        body: ProductManager([
+          Product('Lẩu', 'lau.jpg'),
+          Product('Hải Sản', 'hai_san.jpg'),
+          Product('Thịt Nướng', 'thit_nuong.jpg')
+        ]));
   }
 }
