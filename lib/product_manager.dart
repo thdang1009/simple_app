@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:simple_app/product.dart';
-
+import 'package:simple_app/product_control.dart';
 import 'package:simple_app/products.dart';
 
 class ProductManager extends StatefulWidget {
@@ -25,17 +25,16 @@ class _ProductManagerState extends State<ProductManager> {
       children: <Widget>[
         Container(
           margin: EdgeInsets.all(10.0),
-          child: RaisedButton(
-            onPressed: () {
-              setState(() {
-                _products.add(Product('Added Product', 'food.jpg'));
-              });
-            },
-            child: Text('Add Product'),
-          ),
+          child: ProductControl(addProduct),
         ),
         Products(_products)
       ],
     );
+  }
+
+  void addProduct() {
+    setState(() {
+      _products.add(Product('Added Product', 'food.jpg'));
+    });
   }
 }
